@@ -6,10 +6,10 @@ require __DIR__ . '/../bootstrap.php';
 $router = new \Respect\Rest\Router();
 
 $router->get('/tweets', function() {
-	$twitter = new \Ehub\Consumer\Twitter();
-	$twitter->search('tnwlatam');
+    $twitter = new \Ehub\Consumer\Twitter();
+    $twitter->search('tnwlatam');
 });
 
 $router->get('/', function() {
-	echo 'Home';
+    new \Ehub\Views\ViewHandler('index.html');
 });
