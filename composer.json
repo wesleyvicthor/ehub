@@ -5,13 +5,25 @@
         "respect/rest": "0.4.8"
     },
     "autoload" : {
-	"psr-0": {
-	    "Ehub": "src"
-	}
+        "psr-0": {
+            "Ehub": "src"
+        }
     },
     "authors": [
         {
-            "name": "Trippin' guys",
+            "name": "Henrique Moody",
+            "email": "henriquemoody@gmail.com"
+        },
+        {
+            "name": "Hussani Oliveira",
+            "email": "hussani.oliveira@gmail.com"
+        },
+        {
+            "name": "Thiago Rigo",
+            "email": "thiagophx@gmail.com"
+        },
+        {
+            "name": "Wesley Mendes",
             "email": "w.v.mendes.s@gmail.com"
         }
     ]
