@@ -2,7 +2,8 @@ HOST=localhost
 PORT=8084
 
 title:
-	@echo "Event Hub"
+	@echo "\033[32mEvent Hub\033[0m"
+	@echo
 
 assets: title
 	curl -LO http://twitter.github.com/bootstrap/assets/bootstrap.zip
@@ -11,5 +12,5 @@ assets: title
 	@rm -rf bootstrap/ bootstrap.zip
 	curl -L http://code.jquery.com/jquery-latest.js -o public/js/jquery.js
 
-server: title
+server: title assets
 	php -S ${HOST}:$(PORT) -t public/ public/.route.php
