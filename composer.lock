@@ -1,0 +1,17 @@
+{
+    "hash": "fb224def21cf2d145daa7efaf63b4c22",
+    "packages": [
+        {
+            "package": "Respect/Rest",
+            "version": "0.4.8"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ]
+}
