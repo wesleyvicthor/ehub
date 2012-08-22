@@ -18,7 +18,7 @@ assets: title
 		| cut -d '/' -f 3-4 \
 		| xargs -n 1 -I {} mv -v "./bootstrap/{}" "./public/{}" \
 		| cut -d '>' -f 2
-	@rm -rf bootstrap*
+	@rm -rf bootstrap/ bootstrap.zip
 
 server: title
 	php -S ${HOST}:$(PORT) -t public/ public/.route.php
