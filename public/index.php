@@ -9,3 +9,7 @@ $router->get('/tweets', function() {
 	$twitter = new \Ehub\Consumer\Twitter();
 	$twitter->search('tnwlatam');
 });
+
+$router->get('/', function() {
+	echo 'Home';
+});
