@@ -1,17 +1,25 @@
+body {
+	background: url('../img/saopaulo.jpg') fixed;
+}
+.event-infos h5 {
+	color: #f9f9f9;
+}
 .main-container {
 	height: auto;
 	position: relative;
 	margin: 10px;
-	background-color: #fff;
+	background: inherit;
 }
 
 .event-infos {
+	background-color: #000;
 	width: 300px;
 	height: 400px;
+	opacity: 0.8;
+	color: #fff;
 }
 
 .event-logo {
-	background-color: #ccc;
 	padding: 7px;
 }
 
@@ -73,14 +81,17 @@
 	width: 250px;
 	font-size: 11px;
 	position: absolute;
+	background: #000;
 }
 
 .collaborations section p {
-	padding: 10px;
+	padding: 5px;
+	color: #ccc;
 }
 
-.tnw-twittes section {
-	padding: 4px;
+.tnw-twittes section p {
+	padding: 5px;
+	color: #ccc;
 }
 
 .tnw-twittes {
@@ -88,4 +99,5 @@
 	font-size: 11px;
 	position: absolute;
 	left: 300px;
+	background: #000;
 }
