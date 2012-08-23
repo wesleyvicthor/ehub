@@ -1,15 +1,18 @@
 <?php
-
 /* Bootstrap */
 require __DIR__ . '/../bootstrap.php';
+
+session_start();
 
 $router = new \Respect\Rest\Router();
 
 $router->get('/tweets', function() {
 	$twitter = new \Ehub\Consumer\Twitter();
-	$twitter->search('tnwlatam');
-});
+	return $twitter->search('tnwlatam');
+})->accept(array(
+	'.json' => 'json_encode'
+));
 
 $router->get('/', function() {
-	echo 'Home';
+	return 'Home';
 });
