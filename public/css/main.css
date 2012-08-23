@@ -64,6 +64,15 @@ body {
 	height: 160px;
 }
 
+.list-locations {
+	padding: 3px;
+	border: 1px solid #ddd;
+	line-height: 15px;
+}
+.location-name {
+	line-height: 36px;
+}
+
 .list-twitt {
 	padding: 3px;
 	border: 1px solid #ddd;

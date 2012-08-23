@@ -126,12 +126,16 @@ $(document).ready(function() {
 		var items = '';
 
 		jQuery.each(data, function(key, val) {
-		  items += '<li>'+ val.name +'</li>';
+			var stripped = '';
+			(function(key){
+				stripped = (key % 2 == 0) ? 'odd' : 'even';
+			}(key))
+
+
+
+			items += '<li class="list-locations '+stripped+'"><div class="img-wrapper"><img width="20" src="'+ val.photourl +'"></div><div class="location-name">'+val.name+'</div></li>';
 		});
 
-		$('#ul-nearby').append(items);
-
-
-		//console.log(items);
+		$('#ul-nearby').prepend(items);
 	});
 });
