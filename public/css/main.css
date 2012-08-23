@@ -101,3 +101,8 @@ body {
 	left: 300px;
 	background: #000;
 }
+
+#tweets {
+	height: 140px;
+	overflow: scroll;
+}
