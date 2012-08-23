@@ -50,4 +50,17 @@ $(document).ready(function() {
 		}, 'json');
 	}, 500);
 
+	$.getJSON("http://ehub/place/5034cca2e4b0ec35e6f8b5d3.json", function(data){
+		var items = '';
+
+		jQuery.each(data, function(key, val) {
+		  items += '<li>'+ val.name +'</li>';
+		});
+
+		$('#ul-nearby').append(items);
+
+
+		//console.log(items);
+	});
+
 });
