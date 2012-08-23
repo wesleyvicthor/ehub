@@ -15,7 +15,7 @@ $router->get('/tweets', function() {
 
 $router->get('/place/*', function($placeId) {
     $foursquare = new \Ehub\Consumer\Foursquare();
-    var_dump($foursquare->getPlace($placeId));
+    $foursquare->getPlace($placeId);
 });
 
 $router->get('/', function() {
