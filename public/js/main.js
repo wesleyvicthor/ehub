@@ -82,10 +82,21 @@ $(document).ready(function() {
 			buttons: [{name: "Next"}],
 			description: "Lista de quem está na aplicação, ou fez checking pelo foursquare com a possibilidade de gerar grupos de conversas. O evento tem a facilidade de interagir com os usuários na aplicação através de messagens às salas ou individualmente.",
 			id: "fourth",
+			next: "fifth",
 			title: "Quem está no evento?",
 			position: 'leftTop',
 			closeOnEscape: true
 		});
+
+		guiders.createGuider({
+			buttons: [{name: "Close", onclick: guiders.hideAll}],
+			attachTo: '#w-eat',
+			description: "Lista dos restaurantes mais próximos ao evento.",
+			id: "fifth",
+			title: "Onde comer?",
+			position: 'leftTop',
+			closeOnEscape: true
+ 		});
 	}
 
 	function handleTweets(result) {
