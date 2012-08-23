@@ -14,5 +14,5 @@ $router->get('/tweets', function() {
 ));
 
 $router->get('/', function() {
-	return 'Home';
+    new \Ehub\Views\ViewHandler('index.html');
 });

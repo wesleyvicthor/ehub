@@ -1,0 +1,38 @@
+div {
+	border: 1px solid red;
+}
+
+.container {
+	height: 600px;
+	position: relative;
+}
+
+.event-infos {
+	width: 300px;
+	height: 400px;
+}
+
+.event-logo {
+	width: 100px;
+	height: 80px;
+}
+
+.event-data {
+
+}
+
+.chat {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	bottom:0;
+	right: 0;
+}
+
+.twitt {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top:0;
+	right: 0;
+}
