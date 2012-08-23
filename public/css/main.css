@@ -87,11 +87,13 @@ body {
 .collaborations section p {
 	padding: 5px;
 	color: #ccc;
+	line-height: 11px;
 }
 
 .tnw-twittes section p {
 	padding: 5px;
 	color: #ccc;
+	line-height: 11px;
 }
 
 .tnw-twittes {
