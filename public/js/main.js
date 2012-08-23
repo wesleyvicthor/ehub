@@ -96,7 +96,10 @@ $(document).ready(function() {
 		}
 		$twitt = $('.twitt');
 		$.each(result, function (i, el) {
-			var stripped = (i % 2 == 0)? 'odd' : 'even';
+			var stripped = '';
+			(function(i){
+				stripped = (i % 2 == 0)? 'odd' : 'even';
+			}(i))
 			var $list = $('<li class="list-twitt '+stripped+'"><div class="img-wrapper"><img width="20" src="'+el.profile+'" /></div><div style="line-height: 11px">'+el.text+'</div><div>'+el.user+'</div></li>');
 			$('.twitt ul').prepend($list);
 		});

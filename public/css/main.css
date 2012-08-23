@@ -106,5 +106,5 @@ body {
 
 #tweets {
 	height: 140px;
-	overflow: scroll;
+	overflow-x: auto;
 }
