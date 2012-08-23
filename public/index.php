@@ -13,6 +13,11 @@ $router->get('/tweets', function() {
 	'.json' => 'json_encode'
 ));
 
+$router->get('/place/*', function($placeId) {
+    $foursquare = new \Ehub\Consumer\Foursquare();
+    var_dump($foursquare->getPlace($placeId));
+});
+
 $router->get('/', function() {
     new \Ehub\Views\ViewHandler('index.html');
 });
