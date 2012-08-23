@@ -60,23 +60,33 @@ class Foursquare
 
         $foodPlaces = $this->explore($latLon)->response->groups[0]->items;
 
-        $result = "<h2>{$place->response->venue->name}</h2>";
-        $result .= "<p>Lugares recomendados:</p>";
-
-        foreach ($foodPlaces as $foodPlace) {
-            $venue = $foodPlace->venue;
-            $icon = $venue->categories[0]->icon;
-            //var_dump($icon);
-            $photourl = $icon->prefix . '32' . $icon->name;
-            $result .= "<img src=\"{$photourl}\" />";
-            $result .= "Nome: {$venue->name}<br />";
-            $result .= "Endereço: {$venue->location->address}<br />";
-            $result .= "Contato: {$venue->contact->formattedPhone}<br /><br />";
-        }
-        echo $result;
+        return $this->getNearLocations($latLon);
     }
 
-    public function explore($latLon, $section = 'food')
+    public function getNearLocations($latLon, $section = 'food')
+    {
+
+        $items = $this->explore($latLon, $section)->response->groups[0]->items;
+
+        $places = array();
+        foreach ($items as $item) {
+            $venue = $item->venue;
+            $icon = $venue->categories[0]->icon;
+            $photourl = $icon->prefix . '32' . $icon->name;
+
+            $place = new \StdClass();
+            $place->name = $venue->name;
+            $place->address = $venue->location->address;
+            $place->phone = $venue->contact->formattedPhone;
+            $place->photourl = $photourl;
+
+            $places[] = $place;
+        }
+
+        return $places;
+    }
+
+    public function explore($latLon, $section)
     {
         $args = array(
             //'ll' => '23.526605235257595,-46.737089991858504',
