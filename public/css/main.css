@@ -1,10 +1,8 @@
-div {
-	border: 1px solid red;
-}
-
-.container {
-	height: 600px;
+.main-container {
+	height: auto;
 	position: relative;
+	margin: 10px;
+	background-color: #fff;
 }
 
 .event-infos {
@@ -13,8 +11,15 @@ div {
 }
 
 .event-logo {
-	width: 100px;
-	height: 80px;
+	background-color: #ccc;
+	padding: 7px;
+}
+
+.event-logo div {
+	height:54px; 
+	width:266px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .event-data {
@@ -23,16 +28,26 @@ div {
 
 .chat {
 	position: absolute;
-	width: 200px;
+	width: 300px;
 	height: 200px;
 	bottom:0;
-	right: 0;
+	right: 10px;
 }
 
 .twitt {
 	position: absolute;
-	width: 200px;
+	width: 300px;
 	height: 200px;
-	top:0;
-	right: 0;
+	top:10px;
+	right: 10px;
+}
+
+.collaborations {
+	width: 250px;
+	font-size: 11px;
+	position: absolute;
+}
+
+.collaborations section {
+	padding: 4px;
 }
