@@ -9,6 +9,8 @@ body {
 	position: relative;
 	margin: 10px;
 	background: inherit;
+	width: 940px;
+	margin: 0px auto;
 }
 
 .event-infos {
