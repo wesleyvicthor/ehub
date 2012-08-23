@@ -48,40 +48,43 @@ $(document).ready(function() {
 			id: "first",
 			next: "second",
 			overlay: true,
-			title: "Bem vindo ao Ehub!"
+			title: "Bem vindo ao Ehub!",
+			closeOnEscape: true
 		}).show();
 
 		guiders.createGuider({
-			buttons: [{name: "Next"}, {name: 'Close'}],
+			buttons: [{name: "Close", onclick: guiders.hideAll}, {name: "Next"}],
 			attachTo: '#event-infos',
 			buttons: [{name: "Next"}],
 			description: "Box com as informações principais pertinentes ao evento, dicas, opções, descontos, wifi, agenda, etc. Informações gravadas através de um formulário ou integração com Events do facebook",
 			id: "second",
 			next: "third",
 			title: "O Evento",
-			position: 2
+			position: 2,
+			closeOnEscape: true
 		});
 
 		guiders.createGuider({
-			buttons: [{name: "Next"}, {name: 'Close'}],
+			buttons: [{name: "Close", onclick: guiders.hideAll}, {name: "Next"}],
 			attachTo: '#hashtag-list',
 			buttons: [{name: "Next"}],
 			description: "Lista dos twitts realtime usando a hashtag do evento",
 			id: "third",
 			next: "fourth",
 			title: "O que estão comentando?",
-			position: 'leftTop'
+			position: 'leftTop',
+			closeOnEscape: true
  		});
 
 		guiders.createGuider({
-			buttons: [{name: "Next"}, {name: 'Close'}],
+			buttons: [{name: "Close", onclick: guiders.hideAll}, {name: "Next"}],
 			attachTo: '#who-here',
 			buttons: [{name: "Next"}],
 			description: "Lista de quem está na aplicação, ou fez checking pelo foursquare com a possibilidade de gerar grupos de conversas. O evento tem a facilidade de interagir com os usuários na aplicação através de messagens às salas ou individualmente.",
 			id: "fourth",
-			next: "fifth",
 			title: "Quem está no evento?",
-			position: 'leftTop'
+			position: 'leftTop',
+			closeOnEscape: true
 		});
 	}
 
@@ -92,7 +95,10 @@ $(document).ready(function() {
 		}
 		$twitt = $('.twitt');
 		$.each(result, function (i, el) {
-			var stripped = (i % 2 == 0)? 'odd' : 'even';
+			var stripped = '';
+			(function(i){
+				stripped = (i % 2 == 0)? 'odd' : 'even';
+			}(i))
 			var $list = $('<li class="list-twitt '+stripped+'"><div class="img-wrapper"><img width="20" src="'+el.profile+'" /></div><div style="line-height: 11px">'+el.text+'</div><div>'+el.user+'</div></li>');
 			$('.twitt ul').prepend($list);
 		});
