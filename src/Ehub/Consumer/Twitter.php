@@ -11,7 +11,7 @@ class Twitter
 		$url = self::URL . '?q=' . urlencode('#' . $hashTag);
 		$url = isset($_SESSION['since_id']) ? $url . '&since_id=' . $_SESSION['since_id'] : $url;
 		$tweets = json_decode(file_get_contents($url));
-
+		var_dump($http_response_header);
 		if (count($tweets->results) == 0) {
 			return array();
 		}
@@ -27,7 +27,7 @@ class Twitter
 
 			$tweetsInfo[] = $t;
 		}
-
+		var_dump($tweetsInfo);die;
 		return $tweetsInfo;
 	}
 }
