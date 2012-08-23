@@ -5,14 +5,16 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/guider.css">
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/guiderjs.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
     <div class="main-container well">
-        <div class="event-infos well">
+        <div id="event-infos" class="event-infos well">
             <div class="event-logo"><div><img src="img/tnwconf2.png"></div></div>
             <div class="event-data">
                 <section>
@@ -52,42 +54,54 @@ Example partner page:
 <br />Amazon
 <br />.Me" id="apis-list">API Partners and Sponsors</h5>
                 <a href="">Livestream</a>
-                <br />Wi-fi:
-                listar wi-fis
+                <br />Wi-fi:<br />
+                <a id="wi-hack" rel="tooltip" title="tnw@2012">TNW-Hack</a><br />
+                <a id="wi-imp" rel="tooltip" title="tnw@2012">TNW-Imprensa</a><br />
+                <a id="wi-conf" rel="tooltip" title="tnw@2012">TNW-Conference</a>
+                </section>
+            </div>
+        </div>
+        <div class="box-container">
+            <div class="collaborations thumbnail">
+                <h5 class="breadcrumb">Sao Paulo 2012 Collaborations</h5>
+                <section>
+                    <p style="background-color: #111"><strong>Gabriel Rodrigues Couto</strong> (<a href="">@gabrielrcouto</a>) - Web Developer. I will love to build something that integrates social data, maps and mobile location (real time is a plus!).</p>
+                    <p style="background-color: #000"><strong>Daniel Maceira</strong> (<a href="">@danielmaceira</a>) - Web and Mobile Developer. I'm an Entrepreneur, working today on two Startups and owner of a Digital Agency. My goal is to develop a realtime service for mobile and web users, including an e-commerce. I don't have any good idea, but some options. I want to know other ideas, colaborate, create new ideas and co-create in this Hack Battle.</p>
+                    <input style="width:94%" type="text" placeholder="Add">
+                </section>
+            </div>
+
+            <div class="tnw-twittes thumbnail">
+                <h5 class="breadcrumb">@thenextweb</h5>
+                <section class="table-stripped">
+                    <p style="background-color: #111"><strong>The Next Web</strong> (<a href="">@thenextweb</a>) - NO onono nonono non onon onono nono n onononono no nono non onono non</p>
+                    <p style="background-color: #000"><strong>The Next Web</strong> (<a href="">@thenextweb</a>) - NO onono nonono non onon onono nono n onononono no nono non onono non</p>
+                    <p style="background-color: #111"><strong>The Next Web</strong> (<a href="">@thenextweb</a>) - NO onono nonono non onon onono nono n onononono no nono non onono non</p>
                 </section>
             </div>
         </div>
 
-        <div class="collaborations thumbnail">
-            <h5 class="breadcrumb">Sao Paulo 2012 Collaborations</h5>
-            <section>
-                <p style="background-color: #111"><strong>Gabriel Rodrigues Couto</strong> (<a href="">@gabrielrcouto</a>) - Web Developer. I will love to build something that integrates social data, maps and mobile location (real time is a plus!).</p>
-                <p style="background-color: #000"><strong>Daniel Maceira</strong> (<a href="">@danielmaceira</a>) - Web and Mobile Developer. I'm an Entrepreneur, working today on two Startups and owner of a Digital Agency. My goal is to develop a realtime service for mobile and web users, including an e-commerce. I don't have any good idea, but some options. I want to know other ideas, colaborate, create new ideas and co-create in this Hack Battle.</p>
-                <input style="width:94%" type="text" placeholder="Add">
-            </section>
-        </div>
 
-        <div class="tnw-twittes thumbnail">
-            <h5 class="breadcrumb">@thenextweb</h5>
-            <section class="table-stripped">
-                <p style="background-color: #111"><strong>The Next Web</strong> (<a href="">@thenextweb</a>) - NO onono nonono non onon onono nono n onononono no nono non onono non</p>
-                <p style="background-color: #000"><strong>The Next Web</strong> (<a href="">@thenextweb</a>) - NO onono nonono non onon onono nono n onononono no nono non onono non</p>
-                <p style="background-color: #111"><strong>The Next Web</strong> (<a href="">@thenextweb</a>) - NO onono nonono non onon onono nono n onononono no nono non onono non</p>
-            </section>
-        </div>
-
-        <div class="twitt well">
+        <div id="hashtag-list" class="twitt well">
             <div class='navbar'><div class="navbar-inner"><a class="brand">On the #tnwlatam</a></div></div>
             <div id="tweets">
 				<ul class="nav nav-tabs nav-stacked"></ul>
 			</div>
         </div>
+        <div id="who-here" class="chat well">
+            <div class='navbar'><div class="navbar-inner"><a class="brand">Who is here?</a></div></div>
+            <ul class="nav nav-tabs nav-stacked">
+                <li class="list-twitt even"><div class="img-wrapper"><img width="20" src="https://twimg0-a.akamaihd.net/profile_images/1548922900/DSC_0086-low_normal.jpg" /></div><div><a>@victhor_mendes</a><div style="clear: both"></div></div></li>
+                <li class="list-twitt odd"><div class="img-wrapper"><img width="20" src="https://twimg0-a.akamaihd.net/profile_images/1547327409/profile_normal.jpg" /></div><div><a>@thiagophx</a><div style="clear: both"></div></div></li>
+                <li class="list-twitt even"><div class="img-wrapper"><img width="20" src="https://twimg0-a.akamaihd.net/profile_images/1388585313/avatar_sani_normal.jpg" /></div><div><a>@hussanii</a><div style="clear: both"></div></div></li>
+                <li class="list-twitt odd"><div class="img-wrapper"><img width="20" src="https://twimg0-a.akamaihd.net/profile_images/2361602447/8ftybyolbif5jkqbqmga_normal.jpeg" /></div><div><a>@henriquemoody</a><div style="clear: both"></div></div></li>
+            </ul>
+        </div>
         <div class="nearby well">
-            <div class='navbar'><div class="navbar-inner"><a class="brand">Where to eat?</a></div></div>
+            <div class='navbar'><div class="navbar-inner"><a class="brand">Where to Eat?</a></div></div>
             <div id="locations">
             <ul id="ul-nearby" class="nav nav-tabs nav-stacked"></ul>
             </div>
-        </div>
     </div>
 </body>
 </html>
