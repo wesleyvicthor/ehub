@@ -40,22 +40,6 @@ $(document).ready(function() {
 
 	$('#wi-conf').tooltip();
 	showGuider();
-	setInterval(function(){
-		$.get(url, function(result) {
-			if (!result.length) {
-				return;
-			}
-			$twitt = $('.twitt');
-			$('.twitt ul').empty();
-			$.each(result, function (i, el) {
-				var stripped = (i % 2 == 0)? 'odd' : 'even';
-				var $list = $('<li class="list-twitt '+stripped+'"><div class="img-wrapper"><img width="20" src="'+el.profile+'" /></div><div style="line-height: 11px">'+el.text+'</div><div>'+el.user+'</div></li>');
-				$('.twitt ul').prepend($list);
-			});
-
-		}, 'json');
-	}, 500);
-
 
 	function showGuider() {
 		guiders.createGuider({
@@ -101,4 +85,22 @@ $(document).ready(function() {
 		});
 	}
 
+	function handleTweets(result) {
+		if (!result.length) {
+			getTweets();
+			return;
+		}
+		$twitt = $('.twitt');
+		$.each(result, function (i, el) {
+			var stripped = (i % 2 == 0)? 'odd' : 'even';
+			var $list = $('<li class="list-twitt '+stripped+'"><div class="img-wrapper"><img width="20" src="'+el.profile+'" /></div><div style="line-height: 11px">'+el.text+'</div><div>'+el.user+'</div></li>');
+			$('.twitt ul').prepend($list);
+		});
+		getTweets();
+	}
+
+	function getTweets() {
+		$.get(url, handleTweets, 'json');
+	}
+	getTweets();
 });
