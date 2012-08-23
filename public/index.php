@@ -2,6 +2,8 @@
 /* Bootstrap */
 require __DIR__ . '/../bootstrap.php';
 
+session_start();
+
 $router = new \Respect\Rest\Router();
 
 $router->get('/tweets', function() {
