@@ -6,7 +6,7 @@ $router = new \Respect\Rest\Router();
 
 $router->get('/tweets', function() {
 	$twitter = new \Ehub\Consumer\Twitter();
-	return $twitter->search('TNWlatam');
+	return $twitter->search('tnwlatam');
 })->accept(array(
 	'.json' => 'json_encode'
 ));

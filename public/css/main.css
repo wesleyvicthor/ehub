@@ -26,7 +26,15 @@
 
 }
 
+.img-wrapper {
+	float: left;
+	padding: 3px;
+	border: 1px solid #CCC;
+	margin-right: 4px
+}
+
 .chat {
+	padding: 5px;
 	position: absolute;
 	width: 300px;
 	height: 200px;
@@ -34,12 +42,31 @@
 	right: 10px;
 }
 
+.list-twitt {
+	padding: 3px;
+	border: 1px solid #ddd;
+}
+
 .twitt {
+	padding: 5px;
 	position: absolute;
 	width: 300px;
 	height: 200px;
 	top:10px;
 	right: 10px;
+	font-size: 10px;
+}
+
+.odd {
+	background-color: #F9F9F9;
+}
+
+.even {
+	background-color: #FFF;
+}
+
+.twitt {
+	overflow: hidden;
 }
 
 .collaborations {
@@ -48,6 +75,17 @@
 	position: absolute;
 }
 
-.collaborations section {
+.collaborations section p {
+	padding: 10px;
+}
+
+.tnw-twittes section {
 	padding: 4px;
+}
+
+.tnw-twittes {
+	width: 250px;
+	font-size: 11px;
+	position: absolute;
+	left: 300px;
 }
